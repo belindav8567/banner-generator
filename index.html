@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Banner Generator</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+    $(function() {
+        $("#toPink").click(function() {
+            $("div").css("background-color", "pink")
+        });
+        $("#toPurple").click(function() {
+            $("div").css("background-color", "purple")
+        });
+        $("#toGreen").click(function() {
+            $("div").css("background-color", "green")
+        });
+        $('button').click(function() {
+            var username= $("input").val();
+            var userfood= $("input[name=userfood]:checked").val();
+            var useranimal= $("select").val();
+            $("h2").html("Hello my name is "+username +", and I like " + userfood +"! I also like "+ useranimal+".")
+            
+               });
+
+    });
+    </script>
+    <style>
+        div{
+            background-color:black;
+            color:white;
+            height:100px;
+        }
+    </style>
+</head>
+
+<body>
+     
+   Name: <input type="text" name="username">
+   <br>
+   <br>
+   Foods: <br>
+   <input type="radio" name="userfood" value="Pizza">Pizza<br>
+   <input type="radio" name="userfood" value="Tacos">Tacos<br>
+   <input type="radio" name="userfood" value= "Chicken nuggets">Chicken Nuggets<br>
+ <br>
+<select>
+    <option value="Kitties">Cats</option>
+    <option value="Doggies">Dogs</option>
+    <option value="Hamsters">Hamsters</option>
+    <option value="Turtles">Turtles</option>
+</select>
+   <button>Okay!</button>
+ <br>
+ <br>
+<div>
+    <br>
+<h2></h2>
+<br>
+<button id="toPink">Pink</button>
+<button id="toPurple">Purple</button>
+<button id="toGreen">Green</button>
+</div> 
+
+</body>
+<!--html text (name), radiobox(gender), checkbox(food)-->
+<!--css color(button)-->
+</html>
